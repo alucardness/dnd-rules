@@ -3,6 +3,8 @@ const navigationLinks = navigation.querySelectorAll('a');
 const navbar = document.querySelector('.navbar');
 const book = document.querySelector('.book-section');
 
+setYear();
+
 window.addEventListener('wheel', function (event) {
     if (navbar.classList.contains('hidden') === false) return;
 
@@ -21,12 +23,12 @@ navigationLinks.forEach(link => {
     });
 });
 
-book.addEventListener('click', () => {
-    collapseNavigation();
-    toggleNavbar()
-});
-
-setYear();
+if (book !== null) {
+    book.addEventListener('click', () => {
+        collapseNavigation();
+        toggleNavbar()
+    });
+}
 
 function collapseNavigation() {
     if (navigation === null) return;
