@@ -1,17 +1,124 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'DM Serif Display', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
 .coming-soon {
-  position: relative;
+    position: relative;
 }
 
 .coming-soon img {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 .coming-soon:after {
-  content: "Очаквайте Скоро";
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  font-weight: bold;
+    content: "Очаквайте Скоро";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    font-weight: bold;
 }
+
+.book-section {
+    background-color: linen;
+}
+
+.book-section h3,
+h4, h5 {
+    color: firebrick;
+}
+
+.book-section .subtitle:after {
+    content: "";
+    border-bottom: 2px solid darkgoldenrod;
+    margin-top: 5px;
+    display: block;
+}
+
+.book-nav ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.book-nav li {
+    padding-left: 20px;
+}
+
+.speech {
+    background-color: aliceblue;
+    padding: 5px 10px;
+    border-left: 1px solid firebrick;
+    border-right: 1px solid firebrick;
+}
+
+.indent {
+    text-indent: 2rem;
+}
+
+.tip {
+    background-color: burlywood;
+    padding: 5px 10px;
+    border-bottom: 2px solid darkgoldenrod;
+    border-top: 2px solid darkgoldenrod;
+    position: relative;
+    -webkit-box-shadow: 0px 5px 25px 0px rgba(92, 92, 92, 1);
+    -moz-box-shadow: 0px 5px 25px 0px rgba(92, 92, 92, 1);
+    box-shadow: 0px 5px 25px 0px rgba(92, 92, 92, 1);
+}
+
+.tip::before {
+    content: "";
+    position: absolute;
+    border-top: 12px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 15px solid sienna;
+    left: 0;
+    top: -14px;
+}
+
+.tip::after {
+    content: "";
+    position: absolute;
+    border-top: 12px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 15px solid sienna;
+    right: 0;
+    top: -14px;
+}
+
+/* Navigation */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#navbarToggleExternalContent {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar.hidden {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* End of Navigation */
