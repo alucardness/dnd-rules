@@ -9,6 +9,12 @@ window.addEventListener('wheel', function (event) {
     toggleNavbar();
 });
 
+window.addEventListener('touchmove', function (e) {
+    if (navbar.classList.contains('hidden') === false) return;
+
+    toggleNavbar();
+});
+
 navigationLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         collapseNavigation();
